@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import React from "react";
 import NavBar from "./components/NavBar";
+import TitleComponent from './components/TitleComponent';
 
 const App = () => {
   return (

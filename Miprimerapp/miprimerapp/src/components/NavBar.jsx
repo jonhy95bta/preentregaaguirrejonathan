@@ -2,13 +2,16 @@ import React from "react";
 import LogoComponent from "./LogoComponent";
 import TitleComponent from "./TitleComponent";
 import NavLinks from "./NavLinks";
+import CardWidget from "./CardWidget";
 
 const Navbar = () => {
   return (
     <nav style={styles.navbar}>
       <LogoComponent />
       <TitleComponent />
+      <CardWidget/>
       <NavLinks />
+      
     </nav>
   );
 };
