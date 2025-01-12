@@ -3,7 +3,7 @@ import React from 'react'
 function FlexContainer(props) {
     const styleFlex = {
         display: "flex",
-        flexWarp: "wrap",
+        flexWrap: "wrap",
         flexDirection: "row",
         gap: "15px",
     }

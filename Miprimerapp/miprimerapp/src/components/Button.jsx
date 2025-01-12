@@ -26,7 +26,7 @@ function Button(props) {
         <button
             onClick={() => {
                 setIsDisabled(true); 
-                setColorState("#ffa500"); a
+                setColorState("#ffa500");
             }}
             style={styles.boton}
             disabled={isDisabled}
