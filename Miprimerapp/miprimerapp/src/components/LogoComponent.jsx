@@ -1,4 +1,7 @@
+
+
 const LogoComponent = () => {
+
   return (
     <div style={styles.logoContainer}>
       <img
