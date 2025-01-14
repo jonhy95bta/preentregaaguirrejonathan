@@ -1,39 +1,42 @@
-import React from 'react'
-import FlexContainer from './FlexContainer'
-import CardProduct from './CardProduct'
+import React, { useState, useEffect } from 'react';
+import ItemList from './ItemList';
 import getAsyncData from '../data/getAsyncData';
-import { useState, useEffect } from 'react';
-import products from '../data/data';
-
-
-function ItemListContainer(props) {
+import { useParams } from 'react-router-dom';  // 
+function ItemListContainer() {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
+  const { id } = useParams(); 
   useEffect(() => {
-    const respuestaPromise = getAsyncData();
+    getAsyncData()
+      .then((respuesta) => {
+        if (id) {
+          const filteredProducts = respuesta.filter((prod) => prod.category.toLowerCase() === id.toLowerCase());
+          setProducts(filteredProducts);
+        } else {
+          setProducts(respuesta);
+        }
+        setLoading(false);
+      })
+      .catch((err) => {
+        setError(err);
+        setLoading(false);
+      });
+  }, [id]); 
+  if (loading) {
+    return <p>Cargando productos...</p>;
+  }
 
-    respuestaPromise.then(respuesta => setProducts(respuesta))
-    .catch((error) => alert(error));
-  }, [])
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
 
-
-
-  const list = products.map((prod) => (<CardProduct
-    key={prod.id}
-    price={prod.price}
-    title={prod.title}
-    text={prod.category}
-    img={prod.img}
-  />));
   return (
     <div>
-      <FlexContainer>
-        {list}
-
-      </FlexContainer>
-
+      <ItemList products={products} />
     </div>
-  )
+  );
 }
 
-export default ItemListContainer
+export default ItemListContainer;

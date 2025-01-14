@@ -1,25 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NavLinks = () => {
   return (
     <ul style={styles.navList}>
-      <li style={styles.navItem}>
-        <a href="/" style={styles.navLink}>
-          Inicio
-        </a>
-      </li>
-      <li style={styles.navItem}>
-        <a href="/Nosotros" style={styles.navLink}>
-          Nosotros
-        </a>
-      </li>
-      <li style={styles.navItem}>
-        <a href="/Contacto" style={styles.navLink}>
-          Contacto
-        </a>
-      </li>
+      <li style={styles.navItem}><Link to="/" style={styles.navLink}>Inicio</Link></li>
+      <li style={styles.navItem}><Link to="/Nosotros" style={styles.navLink}>Nosotros</Link></li>
+      <li style={styles.navItem}><Link to="/Contacto" style={styles.navLink}>Contacto</Link></li>
     </ul>
-  );
+  )
+  
 };
 
 const styles = {
