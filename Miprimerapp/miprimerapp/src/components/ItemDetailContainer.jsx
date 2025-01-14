@@ -15,7 +15,6 @@ function ItemDetailContainer() {
 
     return (
         <div>
-            <h1>Product Details</h1>
             <ItemDetail product={product} />
         </div>
     );

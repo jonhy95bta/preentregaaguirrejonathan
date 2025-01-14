@@ -16,8 +16,8 @@ const App = () => {
 
     <BrowserRouter>
       <NavBar />
-      <div style={{ padding: "20px" }}>
-        <h1>Catalogo de compras</h1>
+      <div style={{ padding: "20px", textAlign: "center" }}>
+      <h1 style={{ marginBottom: "20px" }}>Catálogo de compras</h1>
               <ul style={styles.navList}>
               <li style={styles.navItem}><Link to="/category/pesas" style={styles.navLink}>Pesas</Link></li>
               <li style={styles.navItem}><Link to="/category/yoga" style={styles.navLink}>Yoga</Link></li>

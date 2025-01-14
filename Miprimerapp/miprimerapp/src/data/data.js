@@ -4,7 +4,7 @@ const products = [
         title: 'Mancuernas ajustables',
         price: 99.99,
         stock: 10,
-        img: 'mancuernas.jpg',
+        img: 'https://picsum.photos/seed/mancuernas/300/200',
         category: 'Pesas'
     },
     {
@@ -12,7 +12,7 @@ const products = [
         title: 'Esterilla de yoga antideslizante',
         price: 24.99,
         stock: 20,
-        img: 'esterilla_yoga.jpg',
+        img: 'https://picsum.photos/seed/yoga/300/200',
         category: 'Yoga'
     },
     {
@@ -20,7 +20,7 @@ const products = [
         title: 'Banda de resistencia',
         price: 14.99,
         stock: 30,
-        img: 'banda_resistencia.jpg',
+        img: 'https://picsum.photos/seed/resistencia/300/200',
         category: 'Entrenamiento funcional'
     },
     {
@@ -28,7 +28,7 @@ const products = [
         title: 'Kettlebell ajustable',
         price: 49.99,
         stock: 15,
-        img: 'kettlebell.jpg',
+        img: 'https://picsum.photos/seed/kettlebell/300/200',
         category: 'Pesas'
     },
     {
@@ -36,7 +36,7 @@ const products = [
         title: 'Rodillo de espuma para masaje',
         price: 19.99,
         stock: 25,
-        img: 'rodillo_espuma.jpg',
+        img: 'https://picsum.photos/seed/rodillo_espuma/300/200',
         category: 'Recuperación'
     },
     {
@@ -44,7 +44,7 @@ const products = [
         title: 'Botella de agua deportiva',
         price: 9.99,
         stock: 50,
-        img: 'botella_agua.jpg',
+        img: 'https://picsum.photos/seed/botella_agua/300/200',
         category: 'Accesorios'
     },
     {
@@ -52,7 +52,7 @@ const products = [
         title: 'Guantes de gimnasio',
         price: 12.99,
         stock: 20,
-        img: 'guantes_gimnasio.jpg',
+        img: 'https://picsum.photos/seed/guantes_gimnasio/300/200',
         category: 'Accesorios'
     },
     {
@@ -60,7 +60,7 @@ const products = [
         title: 'Sudadera deportiva',
         price: 29.99,
         stock: 15,
-        img: 'sudadera_deportiva.jpg',
+        img: 'https://picsum.photos/seed/sudadera_deportiva/300/200',
         category: 'Ropa deportiva'
     },
     {
@@ -68,7 +68,7 @@ const products = [
         title: 'Leggings deportivos',
         price: 24.99,
         stock: 25,
-        img: 'leggings_deportivos.jpg',
+        img: 'https://picsum.photos/seed/leggings_deportivos/300/200',
         category: 'Ropa deportiva'
     },
     {
@@ -76,7 +76,7 @@ const products = [
         title: 'Smartwatch deportivo',
         price: 199.99,
         stock: 5,
-        img: 'smartwatch.jpg',
+        img: 'https://picsum.photos/seed/smartwatch/300/200',
         category: 'Tecnología'
     },
     {
@@ -84,7 +84,7 @@ const products = [
         title: 'Cinta de correr plegable',
         price: 499.99,
         stock: 3,
-        img: 'cinta_correr.jpg',
+        img: 'https://picsum.photos/seed/cinta_correr/300/200',
         category: 'Cardio'
     },
     {
@@ -92,7 +92,7 @@ const products = [
         title: 'Bicicleta estática',
         price: 399.99,
         stock: 4,
-        img: 'bicicleta_estatica.jpg',
+        img: 'https://picsum.photos/seed/bicicleta_estatica/300/200',
         category: 'Cardio'
     },
     {
@@ -100,7 +100,7 @@ const products = [
         title: 'Pesas rusas',
         price: 69.99,
         stock: 10,
-        img: 'pesas_rusas.jpg',
+        img: 'https://picsum.photos/seed/pesas_rusas/300/200',
         category: 'Pesas'
     },
     {
@@ -108,7 +108,7 @@ const products = [
         title: 'Banco de pesas ajustable',
         price: 149.99,
         stock: 8,
-        img: 'banco_pesas.jpg',
+        img: 'https://picsum.photos/seed/banco_pesas/300/200',
         category: 'Pesas'
     },
     {
@@ -116,7 +116,7 @@ const products = [
         title: 'Suplementos deportivos',
         price: 39.99,
         stock: 20,
-        img: 'suplementos.jpg',
+        img: 'https://picsum.photos/seed/suplementos/300/200',
         category: 'Nutrición'
     }
 ];
