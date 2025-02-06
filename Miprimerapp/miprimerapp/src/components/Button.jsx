@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 function Button(props) {
-    const { text, color = "#007bff", disabled = false, children } = props;
+    const { text, color = "#007bff", disabled = false, children, handleClick } = props;
 
     const [isDisabled, setIsDisabled] = useState(disabled);
     const [colorState, setColorState] = useState(color);
@@ -30,10 +30,9 @@ function Button(props) {
 
     return (
         <button
-            onClick={() => {
-                setIsDisabled(true);
-                setColorState("#ffa500");
-            }}
+            onClick={
+                
+                handleClick}
             style={styles.boton}
             disabled={isDisabled}
             onMouseEnter={() => setIsHovered(true)} 

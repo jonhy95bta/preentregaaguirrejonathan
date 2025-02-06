@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-
-function ItemCount() {
+import Button from './Button';
+function ItemCount(props) {
     const [count, setCount] = useState(1);
+    const { onSubmitCount }= props;
 
     const handleAdd = () => {
-        if (count < 15) {
+        if (count < props.max) {
             setCount(count + 1);
         }
     };
@@ -16,6 +17,7 @@ function ItemCount() {
     };
 
     return (
+        <div>
         <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
             <button 
                 onClick={handleSubstract} 
@@ -38,6 +40,10 @@ function ItemCount() {
             >
                 +
             </button>
+        </div>
+        <div>
+                <button onClick={()=> {props.onSubmitCount(count)}}>Enviar</button>
+        </div>
         </div>
     );
 }
