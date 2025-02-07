@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from './button';
+
 function CardProduct(props) {
     const { price, title, text, img, id } = props
 
@@ -65,7 +65,7 @@ function CardProduct(props) {
                 <div style={styles.priceContainer}>
                     <p> $ {price}</p>
                 </div>
-                <Button>Agregar al carrito</Button>        
+
             </div>
         </div>
     );

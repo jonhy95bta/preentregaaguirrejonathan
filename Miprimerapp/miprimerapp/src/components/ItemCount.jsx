@@ -42,7 +42,7 @@ function ItemCount(props) {
             </button>
         </div>
         <div>
-                <button onClick={()=> {props.onSubmitCount(count)}}>Enviar</button>
+                <button onClick={()=> {props.onSubmitCount(count)}}>Agregar al carrito</button>
         </div>
         </div>
     );

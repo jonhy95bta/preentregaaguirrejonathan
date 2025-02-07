@@ -5,7 +5,7 @@ const NavLinks = () => {
   return (
     <ul style={styles.navList}>
       <li style={styles.navItem}><Link to="/" style={styles.navLink}>Inicio</Link></li>
-      <li style={styles.navItem}><Link to="/Nosotros" style={styles.navLink}>Nosotros</Link></li>
+      <li style={styles.navItem}><Link to="/cart" style={styles.navLink}>Carrito</Link></li>
       <li style={styles.navItem}><Link to="/Contacto" style={styles.navLink}>Contacto</Link></li>
     </ul>
   )

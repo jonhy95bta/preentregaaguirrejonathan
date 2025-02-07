@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ItemList from './ItemList';
 import getAsyncData from '../data/getAsyncData';
 import { useParams } from 'react-router-dom';  // 
+import Loader from './Loader';
 function ItemListContainer() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -25,7 +26,7 @@ function ItemListContainer() {
       });
   }, [id]); 
   if (loading) {
-    return <p>Cargando productos...</p>;
+    return <Loader/>;
   }
 
   if (error) {

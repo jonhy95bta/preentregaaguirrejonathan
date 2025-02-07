@@ -31,7 +31,6 @@ function Button(props) {
     return (
         <button
             onClick={
-                
                 handleClick}
             style={styles.boton}
             disabled={isDisabled}
