@@ -6,11 +6,15 @@ const TitleComponent = () => {
 
 const styles = {
   title: {
-    flex: "1 1 auto",
+    display: "inline-block", 
     textAlign: "center",
     margin: 0,
+    padding: "5px 10px", 
     color: "white",
+    fontSize: "4rem", 
+    fontWeight: "bold",
   },
 };
+
 
 export default TitleComponent;

@@ -13,8 +13,10 @@ function ItemListContainer() {
   useEffect(() => {
     // Si se pasa una categoría, usamos getAsynItemsByCategory
     if (catId) {
-      getAsynItemsByCategory(catId)
+
+      getAsynItemsByCategory(catId.toLowerCase())
         .then((respuesta) => {
+
           setProducts(respuesta);
           setLoading(false);
         })

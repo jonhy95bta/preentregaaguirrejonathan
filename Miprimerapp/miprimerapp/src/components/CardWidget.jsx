@@ -3,7 +3,7 @@ import cartContext from "../context/cardContext";
 import { Link } from "react-router-dom";
 function CardWidget() {
   const context = useContext(cartContext)
-  console.log("context ---->", context);
+
   return (
 
     <Link to="/cart" style={{ textDecoration: 'none', color: 'inherit' }}>

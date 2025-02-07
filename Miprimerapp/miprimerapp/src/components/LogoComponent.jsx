@@ -18,7 +18,7 @@ const styles = {
     flex: "0 0 auto",
   },
   logo: {
-    height: "50px",
+    height: "80px",
     padding: "10px",
   },
 };
