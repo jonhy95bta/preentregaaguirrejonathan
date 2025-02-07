@@ -1,17 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
-import products from '../data/data'; 
+import { getAsyncItemById } from '../data/database';
 
 function ItemDetailContainer() {
-    const { id } = useParams(); 
+    const { id } = useParams();
     const [product, setProduct] = useState(null);
 
     useEffect(() => {
-        
-        const selectedProduct = products.find((prod) => prod.id === parseInt(id));
-        setProduct(selectedProduct);
-    }, [id]); 
+        // CREO UNA FUNCION PARA RECIBIR LOS DATOS DESDE LA FIREBASE
+        const fetchProduct = async () => {
+            try {
+                const selectedProduct = await getAsyncItemById(id);
+                setProduct(selectedProduct);
+            } catch (error) {
+                console.error("Error al obtener el producto:", error);
+            }
+        };
+
+        fetchProduct();
+    }, [id]);
 
     return (
         <div>

@@ -1,6 +1,5 @@
 
 import React from "react";
-import Button from "./Button";
 import ItemCount from "./ItemCount";
 import { useContext } from "react";
 import cartContext from "../context/cardContext";
