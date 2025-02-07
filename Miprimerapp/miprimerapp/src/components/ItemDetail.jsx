@@ -14,7 +14,6 @@ function ItemDetail({ product }) {
     }
 
     function handleAddToCart(count) {
-        console.log(`Agregaste ${count} unidades de ${product.title} al carrito`);
         addItem({
             id: product.id,
             title: product.title,

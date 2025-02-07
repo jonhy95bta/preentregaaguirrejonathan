@@ -37,10 +37,14 @@ export default async function getAsyncData() {
 }
 
 export async function getAsyncItemById(itemId) {
-    const docRef = doc(db, "productos", itemId)
-    const docSnapshot = await getDoc(docRef)
-    const docData = docSnapshot.data();
-    return docData;
+    const docRef = doc(db, "productos", itemId);
+    const docSnapshot = await getDoc(docRef);
+
+    if (!docSnapshot.exists()) {
+        throw new Error("El producto no existe");
+    }
+
+    return { ...docSnapshot.data(), id: docSnapshot.id }; 
 }
 
 export async function getAsynItemsByCategory(catId){
