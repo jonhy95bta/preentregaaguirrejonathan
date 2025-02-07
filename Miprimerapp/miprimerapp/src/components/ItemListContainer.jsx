@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ItemList from './ItemList';
-import { getAsyncData, getAsynItemsByCategory } from '../data/database';
+import  getAsyncData,{ getAsynItemsByCategory } from '../data/database';
 import { useParams } from 'react-router-dom';
 import Loader from './Loader';
 
@@ -8,12 +8,12 @@ function ItemListContainer() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const { id } = useParams(); // id es la categoría, por ejemplo
+  const { catId } = useParams(); // id es la categoría, por ejemplo
 
   useEffect(() => {
     // Si se pasa una categoría, usamos getAsynItemsByCategory
-    if (catid) {
-      getAsynItemsByCategory(catid)
+    if (catId) {
+      getAsynItemsByCategory(catId)
         .then((respuesta) => {
           setProducts(respuesta);
           setLoading(false);
@@ -34,7 +34,7 @@ function ItemListContainer() {
           setLoading(false);
         });
     }
-  }, [catid]);
+  }, [catId]);
 
   if (loading) {
     return <Loader />;

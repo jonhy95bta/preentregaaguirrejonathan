@@ -4,7 +4,7 @@ import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
 import { collection, getDocs } from "firebase/firestore";
 import { doc, getDoc } from "firebase/firestore";
-import { collection, query, where, getDocs } from "firebase/firestore";
+import { query, where } from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCDDkOoU57KP1kpr7JEsYLCEZ86UrAd8Ko",
@@ -45,7 +45,7 @@ export async function getAsyncItemById(itemId) {
 
 export async function getAsynItemsByCategory(catId){
     const productsColRef = collection(db,"productos");
-    const q= query (productsColRef, where("category", ""=="" , catId))
+    const q = query(productsColRef, where("category", "==", catId));
 
     const productosSnapshot = await getDocs(q)
 
